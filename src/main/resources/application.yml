@@ -1,0 +1,43 @@
+debug: false
+server:
+  port: 8083
+  servlet:
+    context-path: /
+     
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sociallogin?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    package-to-scan: com.social.user
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+  security:
+    oauth2:
+      client:
+        registration:
+         google:
+          clientId: YOUR_GOOGLE_APP_CLIENT_ID
+          clientSecret: YOUR_GOOGLE_APP_SECRET_KEY
+          scope:
+           - email
+           - profile
+                   
+         facebook:
+          clientId: YOUR_FACEBOOK_APP_CLIENT_ID
+          clientSecret: YOUR_FACEBOOK_APP_SECRET_KEY
+          scope:
+           - email
+           - public_profile
+         
+         github:
+          clientId: YOUR_GITHUB_APP_CLIENT_ID            
+          clientSecret: YOUR_GITHUB_APP_CLIENT_SECRET
+          scope:
+           - user:email
+           - read:user 
