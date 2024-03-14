@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.social</groupId>
-	<artifactId>ProductManager</artifactId>
+	<artifactId>spring-oauth2-socialmedia-login</artifactId>
 	<version>2.0</version>
-	<name>ProductManager</name>
+	<name>spring-oauth2-socialmedia-login</name>
 	<description>Spring Boot CRUD Web App Example</description>
 	<packaging>war</packaging>
 	
